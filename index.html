@@ -2,76 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bridge Helper</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bridge Helper</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <h4>Attendance Log</h4>
-        </div>
-        <div>
-            <form id="form" autocomplete="off">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input type="text" id="nameInput" name="nameInput" required>
-                    <label for="nameInput">Name</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">work</i>
-                    <input type="text" id="teamInput" name="teamInput" required>
-                    <label for="teamInput">Team / Role</label>
-                </div>
-                <button type="submit">submit</button>
-            </form>
-        </div>
-        <div class="btnDiv">
-            <a class="btn waves-effect waves-light blue" id="copy" data-clipboard-target="#textOutput"><i
-                    class="material-icons">content_copy</i></a>
-            <a class="btn waves-effect red" id="clear"><i class="material-icons">delete_forever</i></a>
-        </div>
-        <ul id="textOutput"></ul>
-
+  <div class="container">
+    <div class="attendance-wrapper">
+      <div>
+        <h5>Attendance</h5>
+      </div>
+      <div>
+        <form id="form" autocomplete="off">
+          <div class="input-field col s12">
+            <i class="material-icons prefix blueGreyIcon">account_circle</i>
+            <input type="text" id="nameInput" name="nameInput" required />
+            <label for="nameInput">Name</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix blueGreyIcon">work</i>
+            <input type="text" id="teamInput" name="teamInput" required />
+            <label for="teamInput">Team / Role</label>
+          </div>
+        </form>
+      </div>
+      <div class="btnDiv">
+        <a id="copy" data-clipboard-target="#textOutput"><i class="material-icons blueIcon">content_copy</i></a>
+        <a id="clear"><i class="material-icons redIcon">delete</i></a>
+      </div>
+      <ul id="textOutput"></ul>
     </div>
 
-    <div class="container">
-        <div>
-            <h4>Conversation Log</h4>
-        </div>
-        <div>
-            <form id="conversationForm">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea class="materialize-textarea" name="textarea" id="textarea"></textarea>
-                    <label for="textarea">Start typing notes</label>
-                </div>
-                <button id="enterNote" type="submit" class="btn"><i
-                        class="material-icons right">send</i>Tab+Enter</button>
-            </form>
-        </div>
-        <br>
-        <div class="btnDiv2">
-            <a class="btn waves-effect waves-light blue" id="copy" data-clipboard-target="#conversationOutput"><i
-                    class="material-icons">content_copy</i></a>
-            <a class="btn waves-effect red" id="clearConvo"><i class="material-icons">delete_forever</i></a>
-        </div>
-        <ul id="conversationOutput"></ul>
+    <div class="conversation-wrapper">
+      <div>
+        <h5>Conversation</h5>
+      </div>
+      <div>
+        <br><br>
+        <form id="conversationForm">
+          <div class="input-field col s12">
+            <i class="material-icons prefix blueGreyIcon">mode_edit</i>
+            <textarea class="materialize-textarea" name="textarea" id="textarea" required></textarea>
+            <label for="textarea">Write your notes</label>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div class="btnDiv2">
+        <a id="copy" data-clipboard-target="#conversationOutput"><i class="material-icons blueIcon">content_copy</i></a>
+        <a id="clearConvo"><i class="material-icons redIcon">delete</i></a>
+      </div>
+      <ul id="conversationOutput"></ul>
     </div>
 
-    <footer>
-        <p>developer: louie sevilla</p>
+    <footer class="blue-grey">
+      <div>
+        louie sevilla <i class="fas fa-code"></i>
+      </div>
     </footer>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
