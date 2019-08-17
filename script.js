@@ -104,7 +104,11 @@ function enterInputs(event) {
 
 // Copy texts to clipboard
 const clipboard = new ClipboardJS("#copy");
-clipboard.on("success", function() {});
+clipboard.on("success", function() {
+  M.toast({
+    html: "Ready to paste",
+    classes: "blue"
+});
 // Tooltips for copy
 tippy(".copy", {
   content: "Copy All",
