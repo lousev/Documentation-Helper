@@ -59,7 +59,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   .attendance-wrapper,
   .conversation-wrapper {
     padding: 0;
@@ -75,7 +74,6 @@ footer {
     padding: 0 5px;
   }
 }
-
 
 /* Material Icons Color Choice */
 .material-icons.redIcon {
@@ -96,4 +94,11 @@ footer {
 .btnDiv2 a {
   cursor: pointer;
   padding: 0 10px;
+  height: 100%;
+}
+
+a:visited,
+a:focus,
+a:active {
+  outline: none;
 }

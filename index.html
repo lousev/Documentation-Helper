@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bridge Helper</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bridge Documentation</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-  <link rel="shortcut icon" type="img/png" href="./img/favicon.png">
-</head>
+  <body>
+    <div class="container">
+      <div class="attendance-wrapper">
+        <div>
+          <h5>Attendance</h5>
+        </div>
+        <div>
+          <form id="form" autocomplete="off">
+            <div class="input-field col s12">
+              <i class="material-icons prefix blueGreyIcon">account_circle</i>
+              <input type="text" id="nameInput" name="nameInput" required />
+              <label for="nameInput">Name</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix blueGreyIcon">work</i>
+              <input type="text" id="teamInput" name="teamInput" required />
+              <label for="teamInput">Team / Role</label>
+            </div>
+          </form>
+        </div>
+        <div class="btnDiv">
+          <a class="copy" id="copy" data-clipboard-target="#textOutput"
+            ><i class="material-icons blueIcon">content_copy</i></a
+          >
+          <a class="clear" id="clear"
+            ><i class="material-icons redIcon">delete</i></a
+          >
+        </div>
+        <ul id="textOutput"></ul>
+      </div>
 
-<body>
-  <div class="container">
-    <div class="attendance-wrapper">
-      <div>
-        <h5>Attendance</h5>
+      <div class="conversation-wrapper">
+        <div>
+          <h5>Conversation</h5>
+        </div>
+        <div>
+          <br /><br />
+          <form id="conversationForm">
+            <div class="input-field col s12">
+              <i class="material-icons prefix blueGreyIcon">mode_edit</i>
+              <textarea
+                class="materialize-textarea"
+                name="textarea"
+                id="textarea"
+                required
+              ></textarea>
+              <label for="textarea">Write your notes</label>
+            </div>
+          </form>
+        </div>
+        <br />
+        <div class="btnDiv2">
+          <a class="copy" id="copy" data-clipboard-target="#conversationOutput"
+            ><i class="material-icons blueIcon">content_copy</i></a
+          >
+          <a class="clear" id="clearConvo"
+            ><i class="material-icons redIcon">delete</i></a
+          >
+        </div>
+        <ul id="conversationOutput"></ul>
       </div>
-      <div>
-        <form id="form" autocomplete="off">
-          <div class="input-field col s12">
-            <i class="material-icons prefix blueGreyIcon">account_circle</i>
-            <input type="text" id="nameInput" name="nameInput" required />
-            <label for="nameInput">Name</label>
-          </div>
-          <div class="input-field col s12">
-            <i class="material-icons prefix blueGreyIcon">work</i>
-            <input type="text" id="teamInput" name="teamInput" required />
-            <label for="teamInput">Team / Role</label>
-          </div>
-        </form>
-      </div>
-      <div class="btnDiv">
-        <a id="copy" data-clipboard-target="#textOutput"><i class="material-icons blueIcon">content_copy</i></a>
-        <a id="clear"><i class="material-icons redIcon">delete</i></a>
-      </div>
-      <ul id="textOutput"></ul>
+
+      <footer class="blue-grey">
+        <div>louie sevilla <i class="fas fa-code"></i></div>
+      </footer>
     </div>
 
-    <div class="conversation-wrapper">
-      <div>
-        <h5>Conversation</h5>
-      </div>
-      <div>
-        <br><br>
-        <form id="conversationForm">
-          <div class="input-field col s12">
-            <i class="material-icons prefix blueGreyIcon">mode_edit</i>
-            <textarea class="materialize-textarea" name="textarea" id="textarea" required></textarea>
-            <label for="textarea">Write your notes</label>
-          </div>
-        </form>
-      </div>
-      <br />
-      <div class="btnDiv2">
-        <a id="copy" data-clipboard-target="#conversationOutput"><i class="material-icons blueIcon">content_copy</i></a>
-        <a id="clearConvo"><i class="material-icons redIcon">delete</i></a>
-      </div>
-      <ul id="conversationOutput"></ul>
-    </div>
-
-    <footer class="blue-grey">
-      <div>
-        louie sevilla <i class="fas fa-code"></i>
-      </div>
-    </footer>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
