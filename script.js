@@ -108,6 +108,7 @@ clipboard.on("success", function() {
   M.toast({
     html: "Ready to paste",
     classes: "blue"
+  });
 });
 // Tooltips for copy
 tippy(".copy", {
